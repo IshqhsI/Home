@@ -1,0 +1,602 @@
+/* body{
+     /* background: url("img/bg.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;  */
+     body{
+        background-color: #212529;
+    }
+    .first{
+        background: url("../img/4me.jpg");
+        background-size: cover;
+    }
+    .menu{
+        padding: 0;
+    }
+    .navbar-brand{
+        color: #130d0d;
+        font-size: 20px;
+        margin-left: 3rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .navbar-brand:hover{
+        color: #2d2727;
+        font-size: 20px;
+        margin-left: 3rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    .nav-link{
+        color: gray;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .nav-link:hover{
+        color: #000;
+    }
+    .nav-link:active{
+        color: #000;
+    }
+    .active{
+        color: #000;
+    }
+    .nav-link:focus{
+        color: #000;
+    }
+    .nav-link:after{
+        color: #212529;
+    }
+    .navbar-toggler-icon { 
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='w3.org/2000/svg'%3E%3Cpath stroke='rgba(92,46,78, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+    }
+    
+    .btn-log{
+        border: 2px solid #130d0d;
+        color: #130d0d;
+        padding: 6px 1.4rem;
+    }
+    
+    .btn-log:hover{
+        border: 2px solid #130d0d;
+        background-color: #130d0d;
+        color: #fff;
+    }
+    .nav-log{
+        margin: 0 4rem;
+    }
+    
+    .welcome{
+        color: rgb(25, 14, 10);
+        text-shadow: 1px 3px 5px rgb(162, 155, 157);
+        margin-top: 27vh; 
+        font-size: 4.5em; 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .quote{
+        margin-top: 4.2rem;
+    }
+    .umar{
+        margin-top: 1rem;
+        padding-bottom: 30.4vh; 
+        margin-bottom: 0;
+    }
+    
+    .nav-item{
+        margin-right: 3rem;
+    }
+    
+    .second{
+        background-image: url(../img/2.jpg);
+        background-size: cover;
+        background-position: top;
+    }
+    .myfoto{
+        margin: 2rem auto;
+        background-color: #130d0d;
+        width: 20%;
+        border-radius: 50%;
+        box-shadow: 3px 3px 8px black;
+    }
+    .myname{
+        margin-top: 1.7rem;
+        color: rgb(26, 29, 34)
+        /* color: -webkit-linear-gradient(280deg, #27c1c3, #dd2dd5); */
+        
+    }
+    .myjob{
+        font-size: 19px;
+        color: rgb(21, 35, 30);
+    }
+    .myadd{
+        margin-top: 1rem;
+        color: rgb(50, 38, 22);
+        font-size: 16px;
+    }
+    .myquote{
+        margin-top: 4rem;
+        text-align: center;
+        color: #130d0d;
+    }
+    .who{
+        padding-bottom: 4vh;
+    }
+    
+    /* Contact */
+    .div-contact{
+        padding: 15px 0;
+    }
+    
+    .ul-contact{
+        display: inline;
+        list-style-type: none;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .li-contact{
+        display: inline;
+        list-style-type: none;
+        margin: 0 1rem;
+    }
+    
+    .link-contact{
+        text-decoration: none;
+        
+    }
+    
+    .foto-contact{
+        width: 4%;
+        border-radius: 50%;
+        box-shadow: 6px 6px 15px black;
+        margin-bottom: 1rem;
+    }
+    
+    .foot{
+        border: #fff solid 3px;
+        text-align: center;
+    }
+    
+    .cr{
+        font-size: 14px;
+        padding: 20px;
+        margin: 0;
+    }
+    
+    
+    @media screen and (max-width : 767.8px) {
+        body{
+            background-color: #212529;
+            box-sizing: border-box;
+        }
+        .first{
+            /* background: url("img/me.jpg"); */
+            background-color: #fff;
+            background-size: cover;
+            padding: 0;
+        }
+        .menu{
+            padding: 0;
+        }
+        .navbar{
+            border-bottom: 2px solid #130d0d;
+            background-color: #fff;
+        }
+        .navbar-brand{
+            color: #130d0d;
+            font-size: 20px;
+            margin-left: 2rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .navbar-toggler{
+            margin-right: 1.6rem;
+            padding: 4px 8px;
+        }
+        .navbar-nav{
+            /* background-color: aquamarine; */
+            margin-top: 2rem;
+        }
+        .nav-item{
+            background-color: #fff;
+            width: 100%;
+            text-align: center;
+        }
+        .nav-item:hover{
+            background-color: #130d0d;
+            color: #fff;
+        }
+        
+        .nav-item-last{
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .nav-link{
+            color: #130d0d;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .nav-link:hover{
+            color: #fff;
+        }
+        .nav-link:active{
+            color: #fff;
+        }
+        .nav-link:focus{
+            color: #fff;
+        }
+        .nav-link:after{
+            color: #212529;
+        }
+        .active{
+            background-color: #130d0d;
+            color: #fff;   
+        }
+        .navbar-toggler-icon { 
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='w3.org/2000/svg'%3E%3Cpath stroke='rgba(92,46,78, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+        }
+        
+        .btn-log{
+            border: 2px solid #130d0d;
+            color: #130d0d;
+            padding: 6px 2rem;
+            margin: 0;
+        }
+        
+        .btn-log:hover{
+            border: 2px solid #130d0d;
+            background-color: #130d0d;
+            color: #fff;
+        }
+        .nav-log{
+            margin: 0 4rem;
+        }
+    
+        .content{
+            background-image: url(../img/me.jpg);
+            position: relative;
+            z-index: 2;
+            background-size: 100%;
+            width: 100%;
+        }
+        
+        .welcome{
+            color: rgb(25, 14, 10);
+            text-shadow: 1px 3px 5px rgb(162, 155, 157);
+            margin-top: 15vh; 
+            font-size: 3em; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .quote{
+            margin: 0 1rem;
+            margin-top: 7rem;
+            font-size: 15px;
+        }
+        .umar{
+            margin-top: 1rem;
+            font-size: 16px;
+            padding-bottom: 30vh; 
+            margin-bottom: 0;
+            background-color: transparent;
+            z-index: -1;
+        }
+        
+        .nav-item{
+            margin-right: 3rem;
+        }
+        
+        .second{
+            background-image: url(../img/2.jpg);
+            background-size: cover;
+            /* background-position: top; */
+        }
+        .myfoto{
+            margin: 3rem auto;
+            background-color: #130d0d;
+            width: 45%;
+            border-radius: 50%;
+            box-shadow: 3px 3px 8px black;
+        }
+        .myname{
+            margin-top: 1.7rem;
+            color: rgb(26, 29, 34)
+            /* color: -webkit-linear-gradient(280deg, #27c1c3, #dd2dd5); */
+            
+        }
+        .myjob{
+            font-size: 16px;
+            color: rgb(21, 35, 30);
+        }
+        .myadd{
+            margin-top: 1rem;
+            color: rgb(50, 38, 22);
+            font-size: 13px;
+        }
+        .myquote{
+            margin: 4rem 8px;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #130d0d;
+        }
+        .who{
+            padding-bottom: 7vh;
+        }
+        .div-contact{
+            padding: 15px 0;
+        }
+        
+        .ul-contact{
+            display: inline;
+            list-style-type: none;
+            text-align: center;
+            padding: 0;
+        }
+        
+        .li-contact{
+            display: inline;
+            list-style-type: none;
+        }
+        
+        .link-contact{
+            text-decoration: none;
+            
+        }
+        
+        .foto-contact{
+            width: 10%;
+            border-radius: 50%;
+            box-shadow: 6px 6px 15px black;
+            margin: 0;
+        }
+        
+        .foot{
+            border: rgb(0, 0, 0) solid 1px;
+            text-align: center;
+        }
+        
+        .cr{
+            font-size: 10px;
+            padding: 15px;
+            margin: 0;
+        }
+        
+    }
+    
+    
+    @media screen and (max-width: 991.8px) and (min-width: 768px){
+        body{
+            background-color: #212529;
+        }
+        .first{
+            background-image: url(../img/4me.jpg);
+            background-size: cover;
+        }
+        .menu{
+            padding: 0;
+        }
+        .navbar-brand{
+            color: #130d0d;
+            font-size: 20px;
+            margin-left: 1rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .nav-link{
+            color: gray;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .nav-link:hover{
+            color: #000;
+        }
+        .nav-link:active{
+            color: #000;
+        }
+        .nav-link:focus{
+            color: #000;
+        }
+        .nav-link:after{
+            color: #212529;
+        }
+        .active{
+            color: #000;
+        }
+        .navbar-toggler-icon { 
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='w3.org/2000/svg'%3E%3Cpath stroke='rgba(92,46,78, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+        }
+        
+        .btn-log{
+            border: 2px solid #130d0d;
+            color: #000;;
+            padding: 6px 2rem;
+        }
+        
+        .btn-log:hover{
+            border: 2px solid #130d0d;
+            background-color: #000;
+            color: #fff;
+        }
+        .nav-log{
+            margin: 0 1rem;
+        }
+        
+        .welcome{
+            color: rgb(25, 14, 10);
+            text-shadow: 1px 3px 5px rgb(162, 155, 157);
+            margin-top: 28.5vh; 
+            font-size: 4.5em; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .quote{
+            margin-top: 3rem;
+        }
+        .umar{
+            margin-top: 1rem;
+            padding-bottom: 30.8vh; 
+            margin-bottom: 0;
+        }
+        
+        .nav-item{
+            margin-right: 3rem;
+        }
+        
+    
+        /* About */
+        .second{
+            background: url("../img/me.jpg");
+        }
+        .myfoto{
+            margin: 3rem auto;
+            /* background-color: gray; */
+            width: 80%;
+            border-radius: 50%;
+        }
+        .myname{
+            margin-top: 1.7rem;
+            color: rgb(26, 29, 34)
+            /* color: -webkit-linear-gradient(280deg, #27c1c3, #dd2dd5); */
+            
+        }
+        .myjob{
+            font-size: 19px;
+            color: rgb(21, 35, 30);
+        }
+        .myadd{
+            margin-top: 1rem;
+            color: rgb(50, 38, 22);
+            font-size: 16px;
+        }
+        .myquote{
+            margin-top: 3rem;
+        }
+        .who{
+            padding: 0;
+        }
+    
+        /* Contact */
+        .div-contact{
+            padding: 15px 0;
+        }
+        
+        .ul-contact{
+            display: inline;
+            list-style-type: none;
+            text-align: center;
+            padding: 0;
+        }
+        
+        .li-contact{
+            display: inline;
+            list-style-type: none;
+            margin: 0 1.5rem;
+        }
+        
+        .link-contact{
+            text-decoration: none;
+            
+        }
+        
+        .foto-contact{
+            width: 6%;
+            border-radius: 50%;
+            box-shadow: 6px 6px 15px black;
+            margin-bottom: 0;
+        }
+        
+    
+    
+        /* Footer */
+        .foot{
+            border: #fff solid 3px;
+            text-align: center;
+        }
+        
+        .cr{
+            font-size: 14px;
+            padding: 20px;
+            margin: 0;
+        }
+    
+    }
+    
+    /* @media screen and (max-width : 992px) and (min-width : 1200px) {
+        body{
+            background-color:rgb(255, 208, 192);
+        }
+        .first {
+            background-color: #c0584c !important;
+            background-size: cover;
+        }
+        .navbar{
+            border-bottom: 2px solid salmon;
+        }
+        .navbar-brand{
+            margin-left: 1rem;
+        }
+        .navbar-nav{
+            /* background-color: aqua; 
+    
+        .nav-item{
+            text-align: center;
+            margin-right: 0;
+        }
+        .nav-item:active{
+            text-align: end;
+            background-color: #c0584c;
+            margin-right: 0;
+        }
+        .nav-item:hover{
+            text-align: center;
+            background-color: #f37431;;
+            color: #212529;
+            margin-right: 0;
+        }
+        .nav-item:focus{
+            text-align: center;
+            background-color: #ff8173;
+            color: #212529;
+            margin-right: 0;
+        }
+        
+        .nav-link{
+            color: #f37431;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .nav-link:hover{
+            color: #212529;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .nav-link:active{
+            background-color: #c0584c;
+            color: #212529;
+        }
+        .nav-link:focus{
+            background-color: #f37431;
+            color: #212529;
+        }
+    
+        .welcome{
+            color: rgb(255, 208, 192);
+            margin-top: 4rem;
+            font-size: 3em;
+        }
+        .quote{
+            text-align: center;
+            margin: 0 1rem;
+            margin-top: 10rem;
+            color: white;
+            text-shadow: 1px 3px 5px rgba(220, 89, 128, 1);
+        
+        }
+        .umar{
+            margin-top: 1rem;
+            color: rgb(165, 42, 42);
+            
+            padding-bottom: 44vh; 
+            text-shadow: 1px 3px 5px rgba(220, 89, 128, 1);
+        
+        }
+        .myfoto{
+            margin: 4rem auto;
+            background-color: aqua;
+            width: 80%;
+            border-radius: 50%;
+        }
+        .myname{
+            margin-top: 4rem;
+        }
+    } */
+    
