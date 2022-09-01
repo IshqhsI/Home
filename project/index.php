@@ -21,11 +21,12 @@
         insert($_POST);
     }
 
-    // if (!isset($_SESSION["user"])) {
-    //     Header('Location: ../login.php');
-    // }
+    // Cek Cookie dan ambil id untuk mendapat username
+    if( isset($_COOKIE["id"]) ){
+        $id = $_COOKIE["id"];
+        $username = getUser($id);
+    }
 
-    $username = $_SESSION["user"];
     if ($username == "admin") {
         $username = "todolist";
     }
