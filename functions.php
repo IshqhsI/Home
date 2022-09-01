@@ -124,11 +124,9 @@
 
     function getUser($id){
         global $conn;
-
-        $result = query("SELECT `username` FROM `admin` WHERE `id` = $id")[0]["username"];
-        return $result;
+        $result = query("SELECT `username` FROM `admin` WHERE `id` = $id");
+        return $result[0]["username"];
     }
-
 
     // insert todolist
     function insert($data){
