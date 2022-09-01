@@ -20,7 +20,9 @@
         $_SESSION["login"] = false;
     }
 
-    if (!$_SESSION["login"]){
+    if ($_SESSION["login"]){
+        Header('Location:  ');
+    } else {
         Header('Location: login.php ');
     }
 
