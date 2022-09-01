@@ -54,7 +54,8 @@
 
         $addtabel = "CREATE TABLE `$username` (
             id INT AUTO_INCREMENT PRIMARY KEY,
-            do varchar(255)
+            do varchar(255),
+            user varchar(255)
         )";
 
         mysqli_query($conn, $addtabel);
