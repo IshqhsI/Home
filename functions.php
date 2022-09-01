@@ -90,7 +90,8 @@
 
                 $_SESSION["login"] = true;
                 if ($cookie === "on") {
-                    setcookie($username."log" ,hash('sha256', $username), time()+60*60*24*365 );
+                    setcookie("id", $row["id"], time()+60*60*24*365);
+                    setcookie("key", hash('sha256', $username), time()+60*60*24*365 );
                 }
 
                 echo "
@@ -119,6 +120,13 @@
 
         return mysqli_affected_rows($conn);
 
+    }
+
+    function getUser($id){
+        global $conn;
+
+        $result = query("SELECT `username` FROM `admin` WHERE `id` = $id")[0]["username"];
+        return $result;
     }
 
 
