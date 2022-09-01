@@ -3,6 +3,12 @@
     require 'koneksi.php';
     require 'functions.php';
 
+    if (isset($_SESSION["login"])){
+        if($_SESSION["login"]){
+            Header('Location: index.php ');
+        }
+    }
+
     if ( isset($_POST["submit"]) ){
         if (login($_POST) > 0){
             $_SESSION["user"] = $_POST["username"];
