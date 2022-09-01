@@ -21,13 +21,14 @@
         insert($_POST);
     }
     
-    $username = $_SESSION["user"];
 
     // Cek Cookie dan ambil id untuk mendapat username
     if( isset($_COOKIE["id"]) ){
         $id = $_COOKIE["id"];
         $username = getUser($id);
     }
+
+    $username = $_SESSION["user"];
 
     if ($username == "admin") {
         $username = "todolist";
