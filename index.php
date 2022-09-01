@@ -2,12 +2,29 @@
     require 'koneksi.php';
     require 'functions.php';
 
+    
 
    session_start();
-    //    var_dump($_SESSION["login"]);
+
+
+   if (isset($_COOKIE["id"]) && isset($_COOKIE["key"])){
+        $id = $_COOKIE["id"];
+        $key = $_COOKIE["key"];
+        $username = getUser($id);
+
+        if ($key === hash('sha256', $username)){
+            $_SESSION["login"] = true;
+        }
+   }
+    
+    
    
     if ( !isset($_SESSION["login"]) ){
         $_SESSION["login"] = false;
+    }
+
+    if (!$_SESSION["login"]){
+        Header('Location: login.php ');
     }
 
     if(isset($_POST["login"])){
@@ -16,6 +33,7 @@
 
     if(isset($_POST["logout"])){
         $_SESSION["login"] = false;
+        setcookie("id", "123", time()-1);
         header("Location: login.php");
     }
     
@@ -80,7 +98,6 @@
                                             Logout
                                         </button>
                                     </li>
-                                    <input type="hidden" name="user" id="user" value="<?= $_SESSION['user']?>">
                                 </form>
                             <?php } else if (!$_SESSION["login"]){ ?>
                                 <form action="" method="post">
