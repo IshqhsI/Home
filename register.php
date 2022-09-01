@@ -39,7 +39,7 @@
         <?php endif; ?>
     <?php endif; ?>
 </head>
-<body class="">
+<body class="bg-dark">
 
     <div class="container">
         <div class="text-center">
