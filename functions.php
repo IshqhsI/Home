@@ -136,12 +136,10 @@
         global $conn;
         
         if ($tabel == "admin") {
-        $tabel = "todolist";
-    }
+            $tabel = "todolist";
+        }
         $query = "DELETE FROM `$tabel` WHERE `id` = $data";
-        
-         mysqli_query($conn, $query);
-
+        mysqli_query($conn, $query);
         return mysqli_affected_rows($conn);
     }
 
