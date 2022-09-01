@@ -90,7 +90,7 @@
 
                 $_SESSION["login"] = true;
                 if ($cookie === "on") {
-                    setcookie("Test" ,hash('sha256', $username) );
+                    setcookie($username."log" ,hash('sha256', $username) );
                 }
 
                 echo "
