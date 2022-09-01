@@ -5,6 +5,7 @@
 
     if ( isset($_POST["submit"]) ){
         if (login($_POST) > 0){
+            $_SESSION["user"] = $_POST["username"];
             header("Location: index.php");
             exit;
         } else {
