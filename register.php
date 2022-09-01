@@ -5,6 +5,7 @@
     if ( isset($_POST["submit"]) ){
         if (register($_POST) > 0){
             $sukses = true;
+            $gagal = false;
         } else {
             $gagal = true;
             exit;
@@ -38,7 +39,7 @@
         <?php endif; ?>
     <?php endif; ?>
 </head>
-<body class="bg-dark">
+<body class="">
 
     <div class="container">
         <div class="text-center">
