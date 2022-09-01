@@ -90,7 +90,7 @@
 
                 $_SESSION["login"] = true;
                 if ($cookie === "on") {
-                    setcookie($username."log" ,hash('sha256', $username) );
+                    setcookie($username."log" ,hash('sha256', $username), time()+60*60*24*365 );
                 }
 
                 echo "
