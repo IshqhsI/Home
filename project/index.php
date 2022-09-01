@@ -20,6 +20,8 @@
     if (isset ($_POST["submit"])){
         insert($_POST);
     }
+    
+    $username = $_SESSION["user"];
 
     // Cek Cookie dan ambil id untuk mendapat username
     if( isset($_COOKIE["id"]) ){
