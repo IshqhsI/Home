@@ -5,11 +5,11 @@
 
     if ( isset($_POST["submit"]) ){
         if (login($_POST) > 0){
+            $_SESSION["user"] = $_POST["username"];
             header("Location: index.php");
             exit;
         } else {
             $gagal = true;
-            header("Location: login.php");
             exit;
         }
     }
@@ -25,6 +25,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/stylelog.css">
     <title> Login </title>
+    <style>
+        .form-control:-webkit-autofill,
+        .form-control:-webkit-autofill:focus {
+            transition: background-color 600000s 0s, color 600000s 0s;
+        }
+        .remme{
+            margin-top: 12px;
+        }
+
+        .form-check-input {
+            margin-left: 20px;
+        }
+    </style>
+
     <?php if (isset($_POST["submit"])) : ?>
         <?php if ($gagal) : ?>
             <script>
@@ -46,6 +60,9 @@
             
             <label for="password" class="form-label labelpass"> Password </label>
             <input type="password" name="password" id="password" class="form-control" required>
+
+            <input class="form-check-input mt-3" type="checkbox" name="remme" id="remme">
+            <label for="remme" class="text-light remme">Remember Me</label>
 
             <br><br>
             <div class="text-center">
