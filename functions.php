@@ -75,6 +75,8 @@
         $username = $data["username"];
         $password = $data["password"];
 
+        $cookie = isset($data['remme']) ? $data['remme'] : "off";
+
         $result = mysqli_query($conn, "SELECT * FROM `admin` WHERE `username` = '$username' ");
         // $row = mysqli_fetch_assoc($result);        
 
@@ -87,6 +89,9 @@
             if(password_verify($password, $row["password"])){
 
                 $_SESSION["login"] = true;
+                if ($cookie === "on") {
+                    setcookie("Test" ,hash('sha256', $username) );
+                }
 
                 echo "
                     <script>
@@ -94,6 +99,7 @@
                         document.location.href = 'home/index.php';
                     </script>
                 ";
+
             } else {
                 echo "
                     <script>
@@ -124,9 +130,9 @@
         $do = $data["do"];
 
         $tabel = $_SESSION["user"];
-        if ($tabel == "admin") {
-        $tabel = "todolist";
-    }
+            if ($tabel == "admin") {
+            $tabel = "todolist";
+        }
 
         mysqli_query($conn,"INSERT INTO $tabel VALUES ('', '$do') ");
 
