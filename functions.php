@@ -141,7 +141,7 @@
             $tabel = "todolist";
         }
 
-        mysqli_query($conn,"INSERT INTO $tabel VALUES ('', '$do') ");
+        mysqli_query($conn,"INSERT INTO $tabel VALUES ('', '$do'");
 
     }
 
