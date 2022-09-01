@@ -2,11 +2,9 @@
     require 'koneksi.php';
     require 'functions.php';
 
-    
-
    session_start();
 
-
+    // Check Cookie
    if (isset($_COOKIE["id"]) && isset($_COOKIE["key"])){
         $id = $_COOKIE["id"];
         $key = $_COOKIE["key"];
@@ -15,10 +13,9 @@
         if ($key === hash('sha256', $username)){
             $_SESSION["login"] = true;
         }
-   }
-    
-    
+   }    
    
+    //  Check Session
     if ( !isset($_SESSION["login"]) ){
         $_SESSION["login"] = false;
     }
@@ -27,6 +24,7 @@
         Header('Location: login.php ');
     }
 
+    //  Check Button Log
     if(isset($_POST["login"])){
         header("Location: login.php");
     }
@@ -34,11 +32,10 @@
     if(isset($_POST["logout"])){
         $_SESSION["login"] = false;
         setcookie("id", "123", time()-1);
+        setcookie("key", "123", time()-1);
         header("Location: login.php");
     }
     
-    
-
 ?>
 
 <!DOCTYPE html>
