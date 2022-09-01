@@ -1,6 +1,8 @@
 <?php
 
     require 'koneksi.php';
+    
+
 
     function query($query){
         global $conn;
@@ -50,10 +52,19 @@
 
         $password = password_hash($password, PASSWORD_DEFAULT);
 
+        $addtabel = "CREATE TABLE `$username` (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            do varchar(255)
+        )";
+
+        mysqli_query($conn, $addtabel);
+
         $query = "INSERT INTO `admin` VALUES (
                     '', '$username', '$password'   
                  )";
         mysqli_query($conn, $query);
+
+       
 
         return mysqli_affected_rows($conn);
     }
@@ -104,6 +115,7 @@
 
     }
 
+
     // insert todolist
     function insert($data){
 
@@ -111,14 +123,22 @@
 
         $do = $data["do"];
 
-        mysqli_query($conn,"INSERT INTO `todolist` VALUES ('', '$do') ");
+        $tabel = $_SESSION["user"];
+        if ($tabel == "admin") {
+        $tabel = "todolist";
+    }
+
+        mysqli_query($conn,"INSERT INTO $tabel VALUES ('', '$do') ");
 
     }
 
     function hapus($data, $tabel){
         global $conn;
         
-        $query = "DELETE FROM $tabel WHERE `id` = $data";
+        if ($tabel == "admin") {
+        $tabel = "todolist";
+    }
+        $query = "DELETE FROM `$tabel` WHERE `id` = $data";
         
          mysqli_query($conn, $query);
 
