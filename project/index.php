@@ -4,26 +4,33 @@
 
 
    session_start();
-    //    var_dump($_SESSION["login"]);
    
+    
+    // Jika belum Login _SESSION = false
     if ( !isset($_SESSION["login"]) ){
         $_SESSION["login"] = false;
-        
     }
 
+    // Jika False login dulu
     if (!$_SESSION["login"]){
         header("Location: ../");
     }
 
-    
-
+    // Insert dari form untuk menambahkan list
     if (isset ($_POST["submit"])){
         insert($_POST);
-
-        
     }
-        $query = "SELECT * FROM `todolist`";
-        $result = mysqli_query($conn, $query);
+
+    // if (!isset($_SESSION["user"])) {
+    //     Header('Location: ../login.php');
+    // }
+
+    $username = $_SESSION["user"];
+    if ($username == "admin") {
+        $username = "todolist";
+    }
+
+    $result = mysqli_query($conn, "SELECT * FROM `$username`");
 ?>
 
 
@@ -128,16 +135,17 @@
                     <div class="text-center" style="">
                         <ul style="mydo list-style-type: none; padding: 0; margin: 0;">
                             <li class="list-do">
-                                    <input type="hidden" value="<?= $row[0] ?>" name="id">  
-                                    <input type="text" class="form-control" id="mine" disabled value="<?= $row[1]?>">
-                                    <a href="hapus.php?id=<?= $row[0]; ?>"> <button class="btn btn-primary btn-del ms-auto" > <img src="trashbin.png" alt="" style="width: 30px; border-radius: 8px;"> </button> </a>
+                                <input type="hidden" value="<?= $row[0] ?>" name="id">  
+                                <input type="text" class="form-control" id="mine" disabled value="<?= $row[1]?>">
+                                <a href="hapus.php?id=<?= $row[0]; ?>&&todo=<?= $username ?>"> <button class="btn btn-primary btn-del ms-auto" > <img src="trashbin.png" alt="" style="width: 30px; border-radius: 8px;"> </button> </a>
                             </li>
                         </ul>
                         
                     </div>
                 <?php endwhile; ?>
                 
-            <input type="text" name="" class="form-control" style="opacity: 0; cursor: default">;
+            <input type="text" name="" class="form-control" style="opacity: 0; cursor: default">
+            <input type="hidden" name="" class="form-control" id="user" value="<?= $username?>">
 
             
 
