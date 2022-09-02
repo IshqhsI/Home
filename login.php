@@ -32,6 +32,9 @@
     <link rel="stylesheet" href="css/stylelog.css">
     <title> Login </title>
     <style>
+        .container{
+            background-color: #23395a;
+        }
         .form-control:-webkit-autofill,
         .form-control:-webkit-autofill:focus {
             transition: background-color 600000s 0s, color 600000s 0s;
