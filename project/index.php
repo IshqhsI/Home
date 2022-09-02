@@ -4,8 +4,36 @@
 
 
    session_start();
-   
     
+    // Cek Cookie dan ambil id untuk mendapat username
+    if( isset($_COOKIE["id"]) && isset($_COOKIE["key"])){
+        $id = $_COOKIE["id"];
+        $key = $_COOKIE["key"];
+
+        $username = getUser($id);
+
+        if ($key === hash('sha256', $username && $_COOKIE["id"] === $id)){
+            $_SESSION["user"] = $username;
+            $username = $_SESSION["user"];
+        } else {
+            $_SESSION["login"] = false;
+        }
+    } else {
+        $username = $_SESSION["user"];
+    }
+
+
+    if ($username == "admin") {
+        $username = "todolist";
+    }
+
+    // Insert dari form untuk menambahkan list
+    if (isset ($_POST["submit"])){
+        insert($_POST["do"], $username);
+    }
+
+    $result = mysqli_query($conn, "SELECT * FROM `$username`");
+
     // Jika belum Login _SESSION = false
     if ( !isset($_SESSION["login"]) ){
         $_SESSION["login"] = false;
@@ -15,26 +43,6 @@
     if (!$_SESSION["login"]){
         header("Location: ../");
     }
-
-    // Insert dari form untuk menambahkan list
-    if (isset ($_POST["submit"])){
-        insert($_POST);
-    }
-    
-
-    // Cek Cookie dan ambil id untuk mendapat username
-    if( isset($_COOKIE["id"]) ){
-        $id = $_COOKIE["id"];
-        $username = getUser($id);
-    }
-
-    $username = $_SESSION["user"];
-
-    if ($username == "admin") {
-        $username = "todolist";
-    }
-
-    $result = mysqli_query($conn, "SELECT * FROM `$username`");
 ?>
 
 
@@ -59,6 +67,7 @@
             border-radius: 14px;
             
             height: 100%;
+            /* max-height: 500px; */
         }
         .form-control{
             width: 80%;
@@ -130,7 +139,7 @@
             <form action="" method="post" class="mt-5">
 
                 <label class="text-white mx-4"> What do you want to do ? </label>
-                <input type="text" class="form-control form-do mt-2" name="do" autocomplete="off" required>
+                <input type="text" class="form-control form-do mt-2" name="do" id="do" autofocus="on" autocomplete="off" required>
                 <br>
 
                 <button type="submit" class="btn btn-submit" name="submit"> Submit </button>
@@ -147,9 +156,7 @@
                         
                     </div>
                 <?php endwhile; ?>
-                
-            <input type="text" name="" class="form-control" style="opacity: 0; cursor: default">
-            <input type="hidden" name="" class="form-control" id="user" value="<?= $username?>">
+                <br><br>
 
             
 
