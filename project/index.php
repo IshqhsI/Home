@@ -22,7 +22,7 @@
         $username = $_SESSION["user"];
     }
 
-
+    // Karena User admin nama tabelnya to do list
     if ($username == "admin") {
         $username = "todolist";
     }
