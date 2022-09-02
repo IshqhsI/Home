@@ -10,8 +10,12 @@
         $key = $_COOKIE["key"];
         $username = getUser($id);
 
-        if ($key === hash('sha256', $username)){
+        $check = hash('sha256', $username);
+
+        if ($key == $check){
             $_SESSION["login"] = true;
+        } else {
+            $_SESSION["login"] = false;
         }
    }    
    
@@ -20,11 +24,6 @@
         $_SESSION["login"] = false;
     }
 
-    if ($_SESSION["login"]){
-        Header('Location:  ');
-    } else {
-        Header('Location: login.php ');
-    }
 
     //  Check Button Log
     if(isset($_POST["login"])){
