@@ -130,18 +130,11 @@
     }
 
     // insert todolist
-    function insert($data){
+    function insert($data, $tabel){
 
         global $conn;
-
-        $do = $data["do"];
-
-        $tabel = $_SESSION["user"];
-            if ($tabel == "admin") {
-            $tabel = "todolist";
-        }
-
-        mysqli_query($conn,"INSERT INTO $tabel VALUES ('', '$do'");
+        $query = "INSERT INTO $tabel VALUES ('', '$data')";
+        mysqli_query($conn, $query);
 
     }
 
