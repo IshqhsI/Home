@@ -12,7 +12,7 @@
 
         $username = getUser($id);
 
-        if ($key === hash('sha256', $username && $_COOKIE["id"] === $id)){
+        if ($key === hash('sha256', $username) && $_COOKIE["id"] === $id){
             $_SESSION["user"] = $username;
             $username = $_SESSION["user"];
         } else {
