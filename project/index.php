@@ -22,11 +22,6 @@
         $username = $_SESSION["user"];
     }
 
-    // Karena User admin nama tabelnya to do list
-    if ($username == "admin") {
-        $username = "todolist";
-    }
-
     // Insert dari form untuk menambahkan list
     if (isset ($_POST["submit"])){
         insert($_POST["do"], $username);
@@ -125,6 +120,12 @@
         }
         .list-do{
             list-style-type: none;
+        }
+
+        @media screen and (max-width: 576px) {
+           .mycontainer{
+            width: 80%;
+           } 
         }
     </style>
 </head>
