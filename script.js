@@ -1,4 +1,4 @@
-let nav = document.querySelectorAll('.nav-link');
+let nav = document.querySelectorAll('.one');
 const collapse = document.getElementById('navbarSupportedContent');
 let active = document.getElementsByClassName('active');
 
