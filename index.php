@@ -65,13 +65,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#">Beranda</a>
+                            <a class="nav-link one active" data-toggle="tab" href="#">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab"  href="#about"> Tentang </a>
+                            <a class="nav-link one" data-toggle="tab"  href="#about"> Tentang </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#contact" >
+                            <a class="nav-link one" data-toggle="tab" href="#contact" >
                                 Kontak
                             </a>
                         </li>
