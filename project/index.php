@@ -102,9 +102,9 @@
             border-radius: 8px;
         }
         .btn-del{
-            padding: 4.6px;
+            padding: 5px;
             background-color: white;
-            margin-bottom: 4.6px;
+            margin-bottom: 5px;
             border-radius: 8px;
             border: 0;
         }
@@ -124,7 +124,7 @@
 
         @media screen and (max-width: 576px) {
            .mycontainer{
-            width: 80%;
+                width: 100%;
            } 
         }
     </style>
