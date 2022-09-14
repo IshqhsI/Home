@@ -6,6 +6,7 @@
 
     // Check Cookie
    if (isset($_COOKIE["id"]) && isset($_COOKIE["key"])){
+        // var_dump($_COOKIE);
         $id = $_COOKIE["id"];
         $key = $_COOKIE["key"];
         $username = getUser($id);
@@ -31,9 +32,9 @@
     }
 
     if(isset($_POST["logout"])){
-        $_SESSION["login"] = false;
         setcookie("id", "123", time()-1);
         setcookie("key", "123", time()-1);
+        $_SESSION["login"] = false;
         header("Location: login.php");
     }
     
