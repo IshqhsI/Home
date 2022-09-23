@@ -109,10 +109,6 @@
                             <?php }?>
                         
                     </ul>
-                    <!-- <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form> -->
                 </div>
             </div>
         </nav>
@@ -140,21 +136,6 @@
                 <p class="myquote"> "Sungguh, jangan habiskan waktumu untuk membuktikan indahnya purnama, <br> kepada mereka yang hanya mencintai senja." </p>
                 <h6 class="who text-dark"> ~ Ishq </h6>
             </div>
-            
-            <!-- <div class="col-lg-6 col-md-7 col-sm-12 bg-warning justify-content-center">
-                <div>
-                    <div class="col-md-2">
-                        <h3 class="myname"> Muhammad Ridhwan </h3>
-                    </div>
-                    <div class="col-md-2">
-                        <h6> Student | Back-End Developer </h6>
-                    </div>
-                    <div class="col-md-3">
-                        <p> Banjarmasin, Kalimantan Selatan</p>
-                    </div>
-                    
-                </div>
-            </div> -->
         </div>
     </div>
 
