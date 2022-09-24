@@ -132,7 +132,7 @@
 <body bgcolor="black">
 
     <div class="mycontainer">
-        <div class="container bg-dark mt-5">
+        <div class="container bg-dark mt-lg-5">
             <h3 class="text-light text-center pt-4">
                ✨ To Do List ✨
             </h3>
