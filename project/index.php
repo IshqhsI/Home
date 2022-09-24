@@ -102,9 +102,9 @@
             border-radius: 8px;
         }
         .btn-del{
-            padding: 4.6px;
+            padding: 5px;
             background-color: white;
-            margin-bottom: 4.6px;
+            margin-bottom: 5px;
             border-radius: 8px;
             border: 0;
         }
@@ -124,7 +124,7 @@
 
         @media screen and (max-width: 576px) {
            .mycontainer{
-            width: 80%;
+                width: 100%;
            } 
         }
     </style>
@@ -132,7 +132,7 @@
 <body bgcolor="black">
 
     <div class="mycontainer">
-        <div class="container bg-dark mt-5">
+        <div class="container bg-dark mt-lg-5">
             <h3 class="text-light text-center pt-4">
                ✨ To Do List ✨
             </h3>

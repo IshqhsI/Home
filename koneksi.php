@@ -3,8 +3,8 @@
     $host = "localhost";
     $user = "root";
     $pass = "";
-    $db = "mydatabase";
+    $db = "newdatabase";
 
-    $conn = mysqli_connect($host, $user, $pass, $db);
+    $conn = new mysqli($host, $user, $pass, $db);
 
 ?>

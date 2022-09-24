@@ -8,6 +8,7 @@
         global $conn;
 
         $result = mysqli_query($conn, $query);
+        // var_dump($conn);
 
         $rows= [];
         while($row = mysqli_fetch_assoc($result)){
@@ -130,6 +131,10 @@
 
     // insert todolist
     function insert($data, $tabel){
+
+        if ($tabel === "admin"){
+            $tabel = "mydo";
+        }
 
         global $conn;
         $query = "INSERT INTO $tabel VALUES ('', '$data')";
